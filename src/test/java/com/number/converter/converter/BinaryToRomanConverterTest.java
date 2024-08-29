@@ -19,7 +19,7 @@ class BinaryToRomanConverterTest {
     void testConvertInvalidInput() {
         BinaryToRomanConverter converter = new BinaryToRomanConverter();
         assertThrows(IllegalArgumentException.class, () -> converter.convert(""));
-        assertThrows(IllegalArgumentException.class, () -> converter.convert("FB3"));
+        assertThrows(IllegalArgumentException.class, () -> converter.convert("AA"));
     }
 }
 

@@ -7,16 +7,30 @@ import static org.junit.jupiter.api.Assertions.*;
 class ConversionServiceTest {
 
     @Test
-    void testDecimalConversion() {
+    void testDecimalConversionWithStringInput() {
         ConversionService service = new ConversionService();
         String result = service.convert("decimal", "23");
         assertEquals("XXIII", result);
     }
 
     @Test
-    void testBinaryConversion() {
+    void testDecimalConversionWithIntegerInput() {
+        ConversionService service = new ConversionService();
+        String result = service.convert("decimal", 23);
+        assertEquals("XXIII", result);
+    }
+
+    @Test
+    void testBinaryConversionWithStringInput() {
         ConversionService service = new ConversionService();
         String result = service.convert("binary", "10111");
+        assertEquals("XXIII", result);
+    }
+
+    @Test
+    void testBinaryConversionWithIntegerInput() {
+        ConversionService service = new ConversionService();
+        String result = service.convert("binary", 10111);
         assertEquals("XXIII", result);
     }
 

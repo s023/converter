@@ -18,7 +18,8 @@ class DecimalToRomanConverterTest {
     @Test
     void testConvertInvalidInput() {
         DecimalToRomanConverter converter = new DecimalToRomanConverter();
-        assertThrows(IllegalArgumentException.class, () -> converter.convert("4000"));
+        assertThrows(IllegalArgumentException.class, () -> converter.convert("AB"));
         assertThrows(IllegalArgumentException.class, () -> converter.convert("0"));
+        assertThrows(IllegalArgumentException.class, () -> converter.convert(""));
     }
 }

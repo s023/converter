@@ -22,6 +22,10 @@ public class ConversionService {
         if (converter == null) {
             throw new IllegalArgumentException("Unsupported conversion type: " + type);
         }
-        return (String) converter.convert(input);
+        if (input instanceof Integer) {
+            return (String) converter.convert(input.toString());
+        } else {
+            return (String) converter.convert(input);
+        }
     }
 }
