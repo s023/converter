@@ -3,10 +3,13 @@ package com.number.converter.service;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.stereotype.Service;
+
 import com.number.converter.converter.strategies.BinaryToRomanConverter;
 import com.number.converter.converter.Converter;
 import com.number.converter.converter.strategies.DecimalToRomanConverter;
 
+@Service
 public class ConversionService {
 
     private final Map<String, Converter<?, ?>> converters = new HashMap<>();
