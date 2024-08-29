@@ -14,8 +14,8 @@ public class ConversionController {
         this.conversionService = conversionService;
     }
 
-    @GetMapping("/{type}")
-    public String convert(@PathVariable String type, @RequestParam String input) {
+    @GetMapping()
+    public String convert(@RequestParam String type, @RequestParam String input) {
         return conversionService.convert(type, input);
     }
 }
