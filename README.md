@@ -2,15 +2,25 @@
 
 ## How to build
 
-In order to build application enter following command from parent (root) folder:
+### Build the Frontend 
+
+```shell
+cd frontend
+npm run build
+```
+
+### Copy Frontend Files to Backend
+
+```shell
+cp -r build/* ../backend/src/main/resources/static/
+```
+
+### Package the Application
 
 ```shell
 mvn package spring-boot:repackage
 ```
-
-In folder `converter/target` you will have executable JAR file
-
-### How to run
+## How to run
 
 You can run this application:
 
@@ -21,6 +31,3 @@ You can run this application:
 ```shell
 java -jar converter/target/converter-0.0.1-SNAPSHOT.jar
 ```
-### How to extend the solution
-
-The converter/strategies is a suitable place to add another converter. 
