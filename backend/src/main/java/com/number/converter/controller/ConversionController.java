@@ -15,7 +15,7 @@ public class ConversionController {
     }
 
     @GetMapping()
-    public String convert(@RequestParam String type, @RequestParam String input) {
+    public String convert(@RequestParam("type") String type, @RequestParam("input") String input) {
         return conversionService.convert(type, input);
     }
 }

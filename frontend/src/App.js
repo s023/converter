@@ -10,7 +10,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`/api/convert/${type}/${input}`);
+      const response = await fetch(`/api/convert?type=${type}&input=${input}`);
       const data = await response.text();
       setResult(data);
     } catch (error) {

@@ -39,6 +39,9 @@
 				<configuration>
 					<source>${java.version}</source> <!-- Use the Java version from properties -->
 					<target>${java.version}</target> <!-- Use the Java version from properties -->
+					<compilerArgs>
+						<arg>-parameters</arg>
+					</compilerArgs>
 				</configuration>
 			</plugin>
 			<plugin>
