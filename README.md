@@ -29,5 +29,5 @@ You can run this application:
 2) From command line using built JAR file and following command:
 
 ```shell
-java -jar converter/target/converter-0.0.1-SNAPSHOT.jar
+java -jar backend/target/backend-0.0.1-SNAPSHOT.jar
 ```
